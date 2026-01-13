@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/admin/Login";
+import AdminDashboard from "./pages/admin/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +32,8 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/reservation" element={<Booking />} />
           <Route path="/faq" element={<FAQ />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
