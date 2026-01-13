@@ -1,3 +1,5 @@
+import { ADMIN_CREDENTIALS, TIME_SLOTS } from './constants';
+
 // LocalStorage keys
 const STORAGE_KEYS = {
   BOOKINGS: 'dalee_bookings',
@@ -154,7 +156,6 @@ export const isAdminLoggedIn = (): boolean => {
 };
 
 export const adminLogin = (username: string, password: string): boolean => {
-  const { ADMIN_CREDENTIALS } = require('./constants');
   if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
     setToStorage(STORAGE_KEYS.ADMIN_SESSION, { loggedIn: true, timestamp: Date.now() });
     return true;
@@ -168,7 +169,6 @@ export const adminLogout = (): void => {
 
 // Get available time slots for a specific date
 export const getAvailableTimeSlots = (date: string, serviceDuration: number = 150): string[] => {
-  const { TIME_SLOTS } = require('./constants');
   const dayOfWeek = new Date(date).getDay();
   const availability = getAvailability();
   const dayAvailability = availability.find(a => a.dayOfWeek === dayOfWeek);
