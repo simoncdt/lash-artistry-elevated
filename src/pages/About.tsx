@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone, Mail, Award, Heart, Shield, Users } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import salonImage from "@/assets/salon-interior.jpg";
+import salonImage from "@/assets/pers.jpg";
 
 const stats = [
   { value: "500+", label: "Clientes satisfaites" },
-  { value: "5 ans", label: "D'expertise" },
+  { value: "3 ans", label: "D'expertise" },
   { value: "4.9", label: "Note moyenne" },
   { value: "100%", label: "Produits premium" },
 ];
@@ -131,7 +131,7 @@ const About = () => {
                 <img
                   src={salonImage}
                   alt="Salon Dalee_lashes"
-                  className="w-full aspect-[4/3] object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </motion.div>
@@ -204,9 +204,8 @@ const About = () => {
               <MapPin className="w-8 h-8 text-primary mb-4" />
               <h3 className="font-semibold text-lg mb-2">Adresse</h3>
               <p className="text-muted-foreground">
-                123 Avenue de la Beauté
-                <br />
-                75008 Paris, France
+                Trois-rivières
+                Canada
               </p>
             </motion.div>
 
@@ -220,8 +219,8 @@ const About = () => {
               <Clock className="w-8 h-8 text-primary mb-4" />
               <h3 className="font-semibold text-lg mb-2">Horaires</h3>
               <div className="text-muted-foreground space-y-1">
-                <p>Lundi - Samedi: 9h - 19h</p>
-                <p>Dimanche: Fermé</p>
+                <p>Lundi - Dimanche: 9h - 21h</p>
+                
               </div>
             </motion.div>
 
@@ -236,8 +235,8 @@ const About = () => {
               <h3 className="font-semibold text-lg mb-2">Contact</h3>
               <div className="text-muted-foreground space-y-1">
                 <p>
-                  <a href="tel:+33600000000" className="hover:text-primary transition-colors">
-                    +33 6 00 00 00 00
+                  <a href="tel:+1 (873) 255-7383" className="hover:text-primary transition-colors">
+                    +1 (873) 255-7383
                   </a>
                 </p>
                 <p>
@@ -250,24 +249,7 @@ const About = () => {
           </div>
 
           {/* Map Placeholder */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mt-12 rounded-2xl overflow-hidden bg-muted aspect-[21/9] flex items-center justify-center"
-          >
-            <div className="text-center">
-              <MapPin className="w-12 h-12 text-muted-foreground mb-4 mx-auto" />
-              <p className="text-muted-foreground">
-                Carte Google Maps
-                <br />
-                <span className="text-sm">
-                  (Intégration disponible avec une clé API)
-                </span>
-              </p>
-            </div>
-          </motion.div>
+          
         </div>
       </section>
     </Layout>

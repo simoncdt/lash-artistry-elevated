@@ -107,3 +107,12 @@ export const ADMIN_CREDENTIALS = {
   username: "daleela",
   password: "dalee",
 };
+
+export const SALON_TIMEZONE = 'America/Toronto';
+
+
+
+export const SALON_OPEN_HOUR = 8;   // heure locale
+export const SALON_CLOSE_HOUR = 21;
+
+export const SLOT_INTERVAL_MINUTES = 30;

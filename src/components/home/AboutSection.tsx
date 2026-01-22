@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Clock, Phone, Award, Heart, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import salonImage from "@/assets/salon-interior.jpg";
+import salonImage from "@/assets/salon.jpg";
 
 const features = [
   {
@@ -58,7 +58,7 @@ export const AboutSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Horaires</p>
-                  <p className="text-sm text-muted-foreground">Lun - Sam</p>
+                  <p className="text-sm text-muted-foreground">Lun - Dim</p>
                 </div>
               </div>
               <div className="space-y-1 text-sm">
@@ -68,7 +68,7 @@ export const AboutSection = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Après-midi</span>
-                  <span className="font-medium">14h - 19h</span>
+                  <span className="font-medium">13h - 21h</span>
                 </div>
               </div>
             </motion.div>
@@ -133,14 +133,15 @@ export const AboutSection = () => {
             <div className="flex flex-wrap items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border/50 mb-8">
               <MapPin className="w-5 h-5 text-primary shrink-0" />
               <span className="text-sm">
-                123 Avenue de la Beauté, 75008 Paris
+                Trois-rivières
+                Canada
               </span>
               <a
-                href="tel:+33600000000"
+                href="tel:+1 (873) 255-7383"
                 className="flex items-center gap-2 text-sm text-primary hover:underline ml-auto"
               >
                 <Phone className="w-4 h-4" />
-                +33 6 00 00 00 00
+                +1 (873) 255-7383
               </a>
             </div>
 

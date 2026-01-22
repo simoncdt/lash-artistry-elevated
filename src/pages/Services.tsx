@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Clock, ArrowRight, Sparkles, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import classicImage from "@/assets/lashes-classic.jpg";
-import hybridImage from "@/assets/lashes-hybrid.jpg";
-import volumeImage from "@/assets/lashes-volume.jpg";
-import megaVolumeImage from "@/assets/lashes-megavolume.jpg";
+import classicImage from "@/assets/class.jpeg";
+import hybridImage from "@/assets/hyb.jpeg";
+import volumeImage from "@/assets/vol.jpeg";
+import megaVolumeImage from "@/assets/megavol.jpeg";
 
 const services = [
   {
@@ -24,9 +24,9 @@ const services = [
       "Conseils d'entretien",
     ],
     pricing: [
-      { name: "Pose complète", price: "80€", duration: "1h30" },
-      { name: "Remplissage 2 semaines", price: "45€", duration: "45min" },
-      { name: "Remplissage 3 semaines", price: "55€", duration: "1h" },
+      { name: "Pose complète", price: "$60", duration: "2h30" },
+      { name: "Remplissage 2 semaines", price: "$30", duration: "2h30" },
+      { name: "Remplissage 3 semaines", price: "$55", duration: "2h30" },
     ],
   },
   {
@@ -36,7 +36,7 @@ const services = [
     description:
       "Le parfait compromis entre classique et volume. Ce mix harmonieux associe extensions simples et bouquets légers pour un regard intensifié tout en conservant un aspect naturel.",
     image: hybridImage,
-    duration: "2h",
+    duration: "2h30",
     includes: [
       "Consultation personnalisée",
       "Nettoyage des cils",
@@ -44,14 +44,14 @@ const services = [
       "Conseils d'entretien",
     ],
     pricing: [
-      { name: "Pose complète", price: "100€", duration: "2h" },
-      { name: "Remplissage 2 semaines", price: "55€", duration: "1h" },
-      { name: "Remplissage 3 semaines", price: "65€", duration: "1h15" },
+      { name: "Pose complète", price: "$70", duration: "2h" },
+      { name: "Remplissage 2 semaines", price: "$35", duration: "2h30" },
+      { name: "Remplissage 3 semaines", price: "$45", duration: "2h30" },
     ],
   },
   {
     id: "volume",
-    title: "Volume Russe",
+    title: "Volume",
     subtitle: "Intense & Glamour",
     description:
       "La technique Volume Russe crée des bouquets de 2 à 6 extensions ultra-fines sur chaque cil naturel. Le résultat : un regard intense et glamour avec un effet volume spectaculaire.",
@@ -64,32 +64,12 @@ const services = [
       "Conseils d'entretien personnalisés",
     ],
     pricing: [
-      { name: "Pose complète", price: "120€", duration: "2h30" },
-      { name: "Remplissage 2 semaines", price: "65€", duration: "1h15" },
-      { name: "Remplissage 3 semaines", price: "75€", duration: "1h30" },
+      { name: "Pose complète", price: "$80", duration: "2h30" },
+      { name: "Remplissage 2 semaines", price: "$40", duration: "2h30" },
+      { name: "Remplissage 3 semaines", price: "$55", duration: "2h30" },
     ],
   },
-  {
-    id: "mega-volume",
-    title: "Mega Volume",
-    subtitle: "Drama & Impact",
-    description:
-      "Le summum du volume et de l'intensité. Des bouquets de 10+ extensions ultra-légères créent un regard de star, parfait pour les occasions spéciales ou pour celles qui aiment les looks audacieux.",
-    image: megaVolumeImage,
-    duration: "3h",
-    includes: [
-      "Consultation approfondie",
-      "Nettoyage des cils",
-      "Pose mega volume",
-      "Kit d'entretien offert",
-      "Conseils d'entretien VIP",
-    ],
-    pricing: [
-      { name: "Pose complète", price: "150€", duration: "3h" },
-      { name: "Remplissage 2 semaines", price: "80€", duration: "1h30" },
-      { name: "Remplissage 3 semaines", price: "95€", duration: "1h45" },
-    ],
-  },
+  
 ];
 
 const Services = () => {

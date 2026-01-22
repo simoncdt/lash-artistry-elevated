@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import classicImage from "@/assets/lashes-classic.jpg";
-import hybridImage from "@/assets/lashes-hybrid.jpg";
-import volumeImage from "@/assets/lashes-volume.jpg";
-import megaVolumeImage from "@/assets/lashes-megavolume.jpg";
+import classicImage from "@/assets/class.jpeg";
+import hybridImage from "@/assets/hyb.jpeg";
+import volumeImage from "@/assets/Vol.jpeg";
+import megaVolumeImage from "@/assets/megavol.jpeg";
 
 const services = [
   {
@@ -30,23 +30,13 @@ const services = [
   },
   {
     id: "volume",
-    title: "Volume Russe",
+    title: "Volume",
     subtitle: "Intense & Glamour",
     description:
       "Bouquets de 2 à 6 extensions ultra-fines pour un effet volume spectaculaire.",
     duration: "2h30",
     price: "À partir de 120€",
     image: volumeImage,
-  },
-  {
-    id: "mega-volume",
-    title: "Mega Volume",
-    subtitle: "Drama & Impact",
-    description:
-      "Le summum du volume avec des bouquets de 10+ extensions pour un regard de star.",
-    duration: "3h",
-    price: "À partir de 150€",
-    image: megaVolumeImage,
   },
 ];
 

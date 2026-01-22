@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Lock, User, Eye, EyeOff, Sparkles } from "lucide-react";
+import { Lock, User, Eye, EyeOff, Sparkles, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { adminLogin } from "@/lib/storage";
+
+const BACKEND_URL = "http://localhost:5000";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -19,20 +20,34 @@ const AdminLogin = () => {
     setError("");
     setIsLoading(true);
 
-    // Simulate loading
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    try {
+      const response = await fetch(`${BACKEND_URL}/api/admin/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-    if (adminLogin(username, password)) {
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Email ou mot de passe incorrect");
+      }
+
+      // Stockage du token
+      localStorage.setItem("adminToken", data.token);
+      localStorage.setItem("adminEmail", data.admin.email);
+
       navigate("/admin/dashboard");
-    } else {
-      setError("Identifiants incorrects");
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      {/* Background Pattern */}
+      {/* Fond décoratif */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
@@ -57,21 +72,22 @@ const AdminLogin = () => {
           <h1 className="text-3xl font-display font-semibold">
             Dalee<span className="text-primary font-light italic">_lashes</span>
           </h1>
-          <p className="text-muted-foreground mt-2">Espace Administration</p>
+          <p className="text-sm text-muted-foreground">Espace Administration</p>
         </div>
 
-        {/* Login Card */}
+        {/* Carte de connexion */}
         <div className="bg-card rounded-2xl p-8 border border-border shadow-[0_20px_50px_-12px_hsla(0,0%,0%,0.1)]">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">
-                <User className="w-4 h-4 inline mr-2" />
-                Identifiant
+                <Mail className="w-4 h-4 inline mr-2" />
+                Email
               </label>
               <Input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Votre identifiant"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="admin@daleelashes.com"
                 className="h-12"
                 required
               />
@@ -96,11 +112,7 @@ const AdminLogin = () => {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {showPassword ? (
-                    <EyeOff className="w-5 h-5" />
-                  ) : (
-                    <Eye className="w-5 h-5" />
-                  )}
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
               </div>
             </div>
@@ -115,30 +127,12 @@ const AdminLogin = () => {
               </motion.p>
             )}
 
-            <Button
-              type="submit"
-              variant="luxury"
-              size="lg"
-              className="w-full"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                  className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full"
-                />
-              ) : (
-                <>
-                  <Lock className="w-4 h-4" />
-                  Se connecter
-                </>
-              )}
+            <Button type="submit" variant="luxury" size="lg" className="w-full" disabled={isLoading}>
+              {isLoading ? "Connexion en cours..." : "Se connecter"}
             </Button>
           </form>
         </div>
 
-        {/* Back Link */}
         <p className="text-center mt-6 text-sm text-muted-foreground">
           <a href="/" className="hover:text-primary transition-colors">
             ← Retour au site

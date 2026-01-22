@@ -1,20 +1,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Expand } from "lucide-react";
-import classicImage from "@/assets/lashes-classic.jpg";
-import hybridImage from "@/assets/lashes-hybrid.jpg";
-import volumeImage from "@/assets/lashes-volume.jpg";
-import megaVolumeImage from "@/assets/lashes-megavolume.jpg";
-import salonImage from "@/assets/salon-interior.jpg";
-import heroImage from "@/assets/hero-lashes.jpg";
+import classicImage from "@/assets/class.jpeg";
+import hybridImage from "@/assets/hyb.jpeg";
+import volumeImage from "@/assets/Vol.jpeg";
+import megaVolumeImage from "@/assets/megavol.jpeg";
+//import salonImage from "@/assets/class1.jpeg";
+import heroImage from "@/assets/vol.jpeg";
 
 const galleryImages = [
   { src: heroImage, alt: "Extensions de cils", category: "Volume" },
   { src: classicImage, alt: "Extension classique", category: "Classique" },
   { src: volumeImage, alt: "Volume russe", category: "Volume" },
   { src: hybridImage, alt: "Extension hybride", category: "Hybride" },
-  { src: megaVolumeImage, alt: "Mega volume", category: "Mega Volume" },
-  { src: salonImage, alt: "Notre salon", category: "Salon" },
+  //{ src: salonImage, alt: "Notre salon", category: "Salon" },
 ];
 
 export const GallerySection = () => {

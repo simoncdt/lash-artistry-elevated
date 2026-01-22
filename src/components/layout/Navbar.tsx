@@ -93,7 +93,7 @@ export const Navbar = () => {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/dalee_lah?igsh=N2d6dGwwbHVvZ3I3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-muted-foreground hover:text-primary transition-colors"
@@ -101,7 +101,7 @@ export const Navbar = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="tel:+33600000000"
+                href="tel:+1 (873) 255-7383"
                 className="p-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-5 h-5" />
@@ -217,7 +217,7 @@ export const Navbar = () => {
                 className="flex items-center gap-6 mt-4"
               >
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/dalee_lah?igsh=N2d6dGwwbHVvZ3I3"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 text-muted-foreground hover:text-primary transition-colors"
@@ -225,7 +225,7 @@ export const Navbar = () => {
                   <Instagram className="w-6 h-6" />
                 </a>
                 <a
-                  href="tel:+33600000000"
+                  href="tel:+1 (873) 255-7383"
                   className="p-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-6 h-6" />

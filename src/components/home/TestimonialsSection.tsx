@@ -20,14 +20,6 @@ const testimonials = [
     date: "Il y a 1 mois",
   },
   {
-    id: 3,
-    name: "Camille R.",
-    service: "Mega Volume",
-    rating: 5,
-    text: "Je suis cliente fidèle depuis 2 ans et je ne changerais pour rien au monde. Chaque rendez-vous est un moment de détente et le résultat est toujours à la hauteur de mes attentes.",
-    date: "Il y a 3 semaines",
-  },
-  {
     id: 4,
     name: "Léa B.",
     service: "Hybride",

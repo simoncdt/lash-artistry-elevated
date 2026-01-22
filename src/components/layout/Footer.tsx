@@ -46,7 +46,7 @@ export const Footer = () => {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://instagram.com"
+                href="https://www.instagram.com/dalee_lah?igsh=N2d6dGwwbHVvZ3I3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -56,7 +56,7 @@ export const Footer = () => {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                href="tel:+33600000000"
+                href="tel:+1 (873) 255-7383"
                 className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Phone className="w-5 h-5" />
@@ -119,18 +119,18 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-secondary-foreground/70 text-sm">
-                  123 Avenue de la Beauté
+                  Trois-rivières
                   <br />
-                  75008 Paris, France
+                  Canada
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <a
-                  href="tel:+33600000000"
+                  href="tel:+1 (873) 255-7383"
                   className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
                 >
-                  +33 6 00 00 00 00
+                  +1 (873) 255-7383
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -145,9 +145,9 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-secondary-foreground/70 text-sm">
-                  Lun - Sam: 9h - 19h
+                  Lun - Sam: 9h - 21h
                   <br />
-                  Dimanche: Fermé
+                  Dimanche: 9h - 21h
                 </span>
               </li>
             </ul>

@@ -1,28 +1,26 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import classicImage from "@/assets/lashes-classic.jpg";
-import hybridImage from "@/assets/lashes-hybrid.jpg";
-import volumeImage from "@/assets/lashes-volume.jpg";
-import megaVolumeImage from "@/assets/lashes-megavolume.jpg";
-import heroImage from "@/assets/hero-lashes.jpg";
-import salonImage from "@/assets/salon-interior.jpg";
+import classicImage from "@/assets/class.jpeg";
+import hybridImage from "@/assets/hyb.jpeg";
+import volumeImage from "@/assets/vol.jpeg";
+import megaVolumeImage from "@/assets/megavol.jpeg";
+import heroImage from "@/assets/Vol1.jpeg";
+import salonImage from "@/assets/class1.jpeg";
 
 const categories = [
   { id: "all", name: "Tous" },
   { id: "classique", name: "Classique" },
   { id: "hybride", name: "Hybride" },
   { id: "volume", name: "Volume" },
-  { id: "mega-volume", name: "Mega Volume" },
 ];
 
 const galleryItems = [
-  { id: 1, src: heroImage, category: "volume", alt: "Volume Russe" },
+  //{ id: 1, src: heroImage, category: "volume", alt: "Volume Russe" },
   { id: 2, src: classicImage, category: "classique", alt: "Extension Classique" },
   { id: 3, src: volumeImage, category: "volume", alt: "Volume Russe" },
   { id: 4, src: hybridImage, category: "hybride", alt: "Extension Hybride" },
-  { id: 5, src: megaVolumeImage, category: "mega-volume", alt: "Mega Volume" },
-  { id: 6, src: salonImage, category: "classique", alt: "Notre salon" },
+  //{ id: 6, src: salonImage, category: "classique", alt: "Notre salon" },
   { id: 7, src: classicImage, category: "classique", alt: "Extension Classique" },
   { id: 8, src: volumeImage, category: "volume", alt: "Volume Russe" },
   { id: 9, src: hybridImage, category: "hybride", alt: "Extension Hybride" },

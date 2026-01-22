@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-lashes.jpg";
+import heroImage from "@/assets/hero.png";
 
 export const HeroSection = () => {
   return (
